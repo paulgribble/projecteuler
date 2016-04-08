@@ -15,7 +15,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 int main (int argc, char *argv[]) {
 
-  int sum = 0;
+  long int sum = 0;
 
   for (int i=1; i<1000; i++) {
     if ( ((i % 3)==0) | ((i % 5)==0) ) {
@@ -23,7 +23,7 @@ int main (int argc, char *argv[]) {
     }
   }
 
-  printf("the sum of all multiples of 3 or 5 below 1000 is %d\n", sum);
+  printf("the sum of all multiples of 3 or 5 below 1000 is %ld\n", sum);
   
   return 0;
 
