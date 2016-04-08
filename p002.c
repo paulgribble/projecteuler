@@ -13,7 +13,7 @@
   
 */
 
-// compile with: gcc -o p002 p002.c
+// compile with: gcc --std=c99 -o p002 p002.c
 
 #include <stdio.h>
 

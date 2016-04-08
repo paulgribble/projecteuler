@@ -9,7 +9,7 @@
 
 */
 
-// compile with: gcc -o p001 p001.c
+// compile with: gcc --std=c99 -o p001 p001.c
 
 #include <stdio.h>
 
