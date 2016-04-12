@@ -1,5 +1,7 @@
 /*
 
+  Problem 1
+
   Multiples of 3 and 5
 
   If we list all the natural numbers below 10 that are multiples of 3
@@ -8,8 +10,6 @@
   Find the sum of all the multiples of 3 or 5 below 1000.  
 
 */
-
-// compile with: gcc --std=c99 -o p001 p001.c
 
 #include <stdio.h>
 

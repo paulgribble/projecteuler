@@ -1,7 +1,7 @@
 CC = gcc
-OPTS = --std=c99
+OPTS = --std=c99 -Wall
 
-all:	p001 p002 p003
+all:	p001 p002 p003 p004
 
 p001:	p001.c
 	$(CC) $(OPTS) -o p001 p001.c
@@ -12,6 +12,9 @@ p002:	p002.c
 p003:	p003.c
 	$(CC) $(OPTS) -o p003 p003.c -lm
 
+p004:	p004.c
+	$(CC) $(OPTS) -o p004 p004.c
+
 clean:
-	/bin/rm -fr p001 p002 p003
+	/bin/rm -fr p001 p002 p003 p004 *~
 
