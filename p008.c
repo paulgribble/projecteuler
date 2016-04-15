@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
   int i1 = 0;
   int i2 = 12;
   long int bigprod = 0;
-  long int prod = 1;
+  long int prod;
   while (i2 < 1000) {
     prod = 1;
     for (int i=i1; i<=i2; i++) {
