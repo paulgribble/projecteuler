@@ -19,7 +19,7 @@ a + b + c = 1000. Find the product abc.
 #include <stdio.h>
 
 int solution(int a, int b, int c) {
-  if (((a + b + c) == 1000) & (((a*a)+(b*b)) == (c*c)) & (a<b<c)) {
+  if (((a + b + c) == 1000) & (((a*a)+(b*b)) == (c*c)) & (a<b) & (b<c)) {
     return 1;
   }
   else {
