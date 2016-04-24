@@ -49,8 +49,43 @@ int main(int argc, char *argv[]) {
   }
   fclose(fid);
 
-  
+  long int maxprod = 0;
+  long int prod = 0;
 
+  // left-right
+  for (int i=0; i<17; i++) {
+    for (int j=0; j<20; j++) {
+      prod = grid[i][j] * grid[i][j+1] * grid[i][j+2] * grid[i][j+3];
+      if (prod > maxprod) { maxprod = prod; }
+    }
+  }
+
+  // up-down
+  for (int i=0; i<20; i++) {
+    for (int j=0; j<17; j++) {
+      prod = grid[i][j] * grid[i][j+1] * grid[i][j+2] * grid[i][j+3];
+      if (prod > maxprod) { maxprod = prod; }
+    }
+  }  
+
+  // diagonal NW->SE
+  for (int i=0; i<17; i++) {
+    for (int j=0; j<17; j++) {
+      prod = grid[i][j] * grid[i+1][j+1] * grid[i+2][j+2] * grid[i+3][j+3];
+      if (prod > maxprod) { maxprod = prod; }
+    }
+  }
+
+  // diagonal NE->SW
+  for (int i=3; i<20; i++) {
+    for (int j=0; j<17; j++) {
+      prod = grid[i][j] * grid[i-1][j+1] * grid[i-2][j+2] * grid[i-3][j+3];
+      if (prod > maxprod) { maxprod = prod; }
+    }
+  }
+
+  printf("maxprod = %ld\n", maxprod);
+  
   return 0;
 
 }
