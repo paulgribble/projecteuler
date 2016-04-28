@@ -29,15 +29,13 @@ hundred divisors?
 */
 
 #include <stdio.h>
-#include <math.h>
 
 long int numdivisors(long int x) {
 
   long int n = 0;
-  long int sqrx = sqrt(x);
-  for (long int i=1; i<=(sqrx+1); i++) {
+  for (long int i=1; (i*i)<=(x+1); i++) {
     if ((x % i)==0) { n = n + 2; }
-    if ((sqrx*sqrx)==x) { n = n - 1; }
+    if ((i*i)==x) { n = n - 1; }
   }
   return n;
 }

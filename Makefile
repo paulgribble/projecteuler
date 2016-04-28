@@ -37,7 +37,7 @@ p011:	p011.c
 	$(CC) $(OPTS) -o p011 p011.c
 
 p012:	p012.c
-	$(CC) $(OPTS) -o p012 p012.c -lm
+	$(CC) $(OPTS) -o p012 p012.c
 
 clean:
 	/bin/rm -fr p001 p002 p003 p004 p005 p006 p007 p008 p009 p010 p011 p012 *~
