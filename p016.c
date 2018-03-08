@@ -8,6 +8,7 @@ What is the sum of the digits of the number 2^1000?
 
 */
 
+// gcc -o p016 p016.c -lgmp
 
 #include <gmp.h>
 #include <stdio.h>
