@@ -14,7 +14,7 @@ What is the sum of the digits of the number 2^1000?
 #include <stdio.h>
 #include <string.h>
 
-int main(){
+int main(int argc, char *argv[]){
 
   mpz_t result,base;
 
