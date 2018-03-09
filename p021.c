@@ -19,7 +19,6 @@ Evaluate the sum of all the amicable numbers under 10000.
 // gcc -o p021 p021.c
 
 #include <stdio.h>
-#include <string.h>
 
 #define N 10000
 
