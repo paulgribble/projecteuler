@@ -36,7 +36,7 @@ int cycle_len(int x) {
 	int position = 1;
 	int dividend = 1;
 	int remainder;
-	int R[10000] = {0}; // what remainders have we seen so far
+	int R[1000] = {0}; // what remainders have we seen so far
 	while (1) {
 		remainder = dividend % x;
 		if (remainder == 0) {
