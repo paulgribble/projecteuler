@@ -18,41 +18,26 @@ How many starting numbers below ten million will arrive at 89?
 
 */
 
-// gcc -O3 p092.c -o p092
+// gcc -O3 p092b.c -o p092b
 
 #include <stdio.h>
 #include <string.h>
 
 #define N 10000000
 
-int square_digits(int x) {
-	char s[48];
-	sprintf(s, "%d", x);
-	int result = 0;
-	int slen = strlen(s);
-	int d;
-	for (int i=0; i<slen; i++) {
-		d = s[i]-'0';
-		result = result + (d*d);
-	}
-	return result;
-}
-
 int arrives89(int x) {
-	int i=x;
-	int found1or89 = 0;
-	while (found1or89==0) {
-		i = square_digits(i);
-		if ((i==1) || (i==89)) {
-			found1or89 = 1;
+	int ss, digit;
+	while (x!=1 & x!=89) {
+		ss = 0;
+		while (x > 0) {
+			digit = x % 10;
+			ss = ss + digit*digit;
+			x = (x-digit)/10;
 		}
+		x = ss;
 	}
-	if (i==89) {
-		return 1;
-	}
-	else {
-		return 0;
-	}
+	if (x==89) return 1;
+	else return 0;
 }
 
 int main(int argc, char *argv[]) {
