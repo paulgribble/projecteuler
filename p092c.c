@@ -42,20 +42,18 @@ int arrives89(int x, int *chainer) {
 		chain[n_chain] = x;
 		n_chain = n_chain + 1;
 		if (chainer[x] == 89) {
-			for (int i=0; i<n_chain; i++) { chainer[chain[i]] = 89; }
+			for (int i=0; i<n_chain-1; i++) { chainer[chain[i]] = 89; }
 			return 1;
 		}
 		else if (chainer[x] == 1) {
-			for (int i=0; i<n_chain; i++) { chainer[chain[i]] = 1; }
+			for (int i=0; i<n_chain-1; i++) { chainer[chain[i]] = 1; }
 			return 0;
 		}
 	}
 	if (x==89) {
-		for (int i=0; i<n_chain; i++) { chainer[chain[i]] = 89; }
 		return 1;
 	}
 	else {
-		for (int i=0; i<n_chain; i++) { chainer[chain[i]] = 1; }
 		return 0;
 	}
 }
